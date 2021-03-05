@@ -43,8 +43,8 @@ export class TopicAppSelect extends React.Component<IStaffSelectProps> {
         </Select>
         {
           selectData.length ? null : <i>
-            没有应用？
-            <a href={`${urlPrefix}/topic/app-list?${query}`}>立刻创建</a>
+            {/*没有应用？*/}
+            {/*<a href={`${urlPrefix}/topic/app-list?${query}`}>立刻创建</a>*/}
           </i>}
       </>
     );

@@ -6,6 +6,7 @@ import { app } from 'store/app';
 import { CommonAppList } from 'container/app/app-list';
 import { showEditModal } from 'container/modal';
 import Url from 'lib/url-parser';
+import { users } from 'store/users';
 
 @observer
 export class TopicAppList extends CommonAppList {
@@ -36,7 +37,7 @@ export class TopicAppList extends CommonAppList {
       <ul>
         {this.renderSearch('', '请输入应用名称或者负责人')}
         <li className="right-btn-1">
-          <Button type="primary" onClick={() => showEditModal()}>应用申请</Button>
+          <Button type="primary" disabled={users.currentUser.username !== 'fanghanyun'} onClick={() => showEditModal()}>应用申请</Button>
         </li>
       </ul>
     );
